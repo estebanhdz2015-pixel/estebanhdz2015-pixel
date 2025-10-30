@@ -1,0 +1,308 @@
+/* =========================
+   RESET Y FUENTES
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* =========================
+   ESTRELLAS NEÓN
+========================= */
+#stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: gold;
+  border-radius: 50%;
+  animation: blink linear infinite;
+}
+@keyframes blink {
+  0%,100%{opacity:0.1;}
+  50%{opacity:1;}
+}
+
+/* =========================
+   HEADER Y NAVEGACION
+========================= */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  z-index: 100;
+  border-bottom: 1px solid gold;
+}
+header h1 {
+  color: gold;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+header nav a:hover {
+  color: gold;
+  text-shadow: 0 0 10px gold;
+}
+
+/* =========================
+   HERO BANNER
+========================= */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.hero .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: 1s;
+}
+.hero .slide.active {
+  opacity: 1;
+}
+.hero .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+.hero-content {
+  position: relative;
+  text-align: center;
+  z-index: 10;
+}
+.hero-content h2 {
+  font-size: 50px;
+  color: gold;
+  text-shadow: 0 0 15px gold;
+  margin-bottom: 20px;
+}
+.hero-content p {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+.hero-content .btn {
+  padding: 12px 30px;
+  background: gold;
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+.hero-content .btn:hover {
+  background: #fff;
+  color: gold;
+  box-shadow: 0 0 20px gold;
+}
+
+/* =========================
+   SECCIONES
+========================= */
+section {
+  padding: 100px 50px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+section h2 {
+  font-size: 40px;
+  color: gold;
+  margin-bottom: 50px;
+  text-shadow: 0 0 10px gold;
+}
+
+/* =========================
+   SERVICIOS
+========================= */
+.servicios {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.servicio {
+  background: rgba(255,215,0,0.05);
+  border: 1px solid gold;
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  transition: 0.3s;
+}
+.servicio img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  border: 2px solid gold;
+}
+.servicio h3 {
+  color: gold;
+  margin-bottom: 10px;
+}
+.servicio p {
+  font-size: 16px;
+}
+
+/* =========================
+   PAQUETES
+========================= */
+.paquetes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.paquete {
+  background: rgba(255,215,0,0.05);
+  border: 1px solid gold;
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  transition: 0.3s;
+}
+.paquete h3 {
+  color: gold;
+  margin-bottom: 15px;
+}
+.paquete ul {
+  list-style: none;
+  margin-bottom: 15px;
+}
+.paquete ul li {
+  margin: 8px 0;
+}
+.paquete p {
+  font-size: 20px;
+  font-weight: 700;
+  color: gold;
+}
+.paquete .btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 25px;
+  border-radius: 25px;
+  background: gold;
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.paquete .btn:hover {
+  background: #fff;
+  color: gold;
+  box-shadow: 0 0 20px gold;
+}
+
+/* =========================
+   GALERIA
+========================= */
+.galeria {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.galeria img {
+  width: 250px;
+  border-radius: 10px;
+  border: 2px solid gold;
+  transition: 0.3s;
+}
+.galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px gold;
+}
+
+/* =========================
+   CONTACTO
+========================= */
+#contacto p, #contacto a {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #fff;
+  text-decoration: none;
+}
+#contacto a:hover {
+  color: gold;
+  text-shadow: 0 0 10px gold;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  padding: 30px;
+  background: rgba(0,0,0,0.8);
+  text-align: center;
+  border-top: 1px solid gold;
+  color: gold;
+}
+
+/* =========================
+   ANIMACIONES SCROLL
+========================= */
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1s;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px){
+  .servicios, .paquetes, .galeria {
+    flex-direction: column;
+    align-items: center;
+  }
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .hero-content h2 {
+    font-size: 36px;
+  }
+  .hero-content p {
+    font-size: 18px;
+  }
+}
